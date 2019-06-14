@@ -10,18 +10,11 @@ namespace Test
 
         static public void Main(string[] args)
         {
-            // このコードは標準入力と標準出力を用いたサンプルコードです。
-            // このコードは好きなように編集・削除してもらって構いません。
-            // ---
-            // This is a sample code to use stdin and stdout.
-            // Edit and remove this code as you like.
-
-            //var lines = GetStdin();
             string SubStringCheck = String.Empty;
             string PalindromeString = String.Empty;
             int index = 0;
             List<string> PalindromArrays = new List<string>();
-            string[] arrFile = File.ReadAllLines(@"D:\Projects\InputFile.txt");
+            string[] arrFile = File.ReadAllLines(@"D:\Projects\InputFile.txt"); //Give input file path from your directory
             foreach (var line in arrFile)
             {
                 for (index = 0; index < line.Length - 1; index++)
@@ -63,12 +56,6 @@ namespace Test
                 Console.WriteLine("Results not found");
             }
         }
-
-        //static private string[] GetStdin()
-        //{
-
-        //    // return list.ToArray();
-        //}
         static private string GetSubString(string line, int startPos)
         {
             string MySubString = String.Empty;
